@@ -52,7 +52,7 @@ public:
 
 	void PushBack(const type& item)
 	{
-		if (num_elements++ < capacity)
+		if (num_elements + 1 < capacity)
 			data[num_elements++] = item;
 		else
 		{
