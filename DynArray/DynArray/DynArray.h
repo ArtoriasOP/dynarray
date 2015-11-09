@@ -19,8 +19,8 @@ class DynArray
 
 private:
 
-	unsigned int capacity = 0;
-	unsigned int num_elemnts = 0;
+	unsigned int capacity;
+	unsigned int num_elemnts;
 	type* data = NULL;
 
 public:
