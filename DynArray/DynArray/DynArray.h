@@ -21,7 +21,7 @@ private:
 
 	unsigned int capacity;
 	unsigned int num_elemnts;
-	type* data = NULL;
+	type* data;
 
 public:
 	DynArray() : capacity(BLOCK_ARRAY), num_elemnts(0)
