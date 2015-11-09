@@ -53,7 +53,7 @@ public:
 	void PushBack(const type& item)
 	{
 		if (num_elements + 1 < capacity)
-			data[num_elements++] = item;
+			data[num_elements + 1] = item;
 		else
 		{
 			type* tmp = new type[capacity];
