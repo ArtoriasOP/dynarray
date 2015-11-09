@@ -92,11 +92,10 @@ public:
 		return num_elements;
 	}
 	
-	type* c_str() const
+	type At(unsigned int pos) const
 	{
-		return data;
+		return data[pos];
 	}
-
 
 	void add(const type& item, unsigned int pos)
 	{
