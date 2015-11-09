@@ -74,7 +74,7 @@ public:
 
 	}
 
-	bool IsEmpty()
+	bool IsEmpty() const
 	{
 		if (data == NULL)
 			return true;
@@ -82,14 +82,19 @@ public:
 			return false;
 	}
 
-	unsigned int  GetCapacity()
+	unsigned int  GetCapacity() const
 	{
 		return capacity;
 	}
 
-	unsigned int GetSize()
+	unsigned int GetSize() const
 	{
 		return num_elements;
+	}
+	
+	type* c_str() const
+	{
+		return data;
 	}
 
 
