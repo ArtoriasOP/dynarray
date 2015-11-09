@@ -50,7 +50,7 @@ public:
 	}
 
 
-	void PushBack(const type &item)
+	void PushBack(const type& item)
 	{
 		if (num_elements++ < capacity)
 			data[num_elements++] = item;
@@ -85,7 +85,10 @@ public:
 	
 	type At(const unsigned int pos) const
 	{
-		return data[pos];
+		if(pos <= num_elements)
+			return data[pos];
+		else
+			return 0;
 	}
 
 	void add(const type& item, unsigned int pos)
