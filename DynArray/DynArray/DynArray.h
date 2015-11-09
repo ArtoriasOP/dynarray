@@ -58,9 +58,14 @@ public:
 		{
 			type* tmp = new type[capacity];
 			memcpy(tmp, data, capacity);
+			
 			data = new type[capacity + BLOCK_ARRAY];
 			memcpy(data, tmp, num_elements + 1);
+			
 			delete[] tmp;
+			
+			data[num_elements + 1] = item;
+			num_elements++;
 		}
 
 	}
@@ -122,6 +127,7 @@ public:
 			}
 
 			memccpy(data, tmp, num_elements + 1);
+			num_elements++;
 		}
 
 		else
