@@ -95,6 +95,18 @@ public:
 		else
 			return 0;
 	}
+	
+	bool ctr(unsigned int new_capacity)
+	{
+		if(capacity > num_elements)
+		{
+			type* tmp = new type[capacity];
+			memcpy(tmp, data, new_capacity);
+			data = new type[new_capacity];
+			memcpy(data, tmp, num_elements);
+			delete[] tmp;
+		}
+	}
 
 	void add(const type& item, unsigned int pos)
 	{
