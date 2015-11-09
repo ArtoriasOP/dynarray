@@ -83,7 +83,7 @@ public:
 		return num_elements;
 	}
 	
-	type At(unsigned int pos) const
+	type At(const unsigned int pos) const
 	{
 		return data[pos];
 	}
