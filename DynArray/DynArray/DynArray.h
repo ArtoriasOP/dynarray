@@ -76,7 +76,7 @@ public:
 
 	bool IsEmpty() const
 	{
-		if (data == NULL)
+		if (num_elements == 0)
 			return true;
 		else
 			return false;
