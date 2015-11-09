@@ -130,6 +130,11 @@ public:
 			return 0;
 
 	}
+	
+	void Clear()
+	{
+		num_elements = 0;
+	}
 
 };
 
