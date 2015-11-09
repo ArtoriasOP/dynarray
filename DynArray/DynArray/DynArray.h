@@ -58,7 +58,7 @@ public:
 		{
 			type* tmp = new type[capacity];
 			memcpy(tmp, data, capacity);
-			data = new type[capacity + 1];
+			data = new type[capacity + BLOCK_ARRAY];
 			memcpy(data, tmp, num_elements + 1);
 			delete[] tmp;
 		}
@@ -116,7 +116,7 @@ public:
 
 			if (capacity < num_elements)
 			{
-				data = new type[capacity + 1];
+				data = new type[capacity + BLOCK_ARRAY];
 				capacity = capacity + 1;
 
 			}
