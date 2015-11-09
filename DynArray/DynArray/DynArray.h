@@ -43,15 +43,6 @@ public:
 
 
 
-	DynArray(type* Array) : num_elements(sizeof(Array))
-	{
-		data = new type[sizeof(Array)];
-		capacity = MAX(CHUNK, sizeof(Array));
-		memccpy(data, Array, sizeof(Array)* sizeof(type));
-	}
-
-
-
 	~DynArray()
 	{
 		if (data != NULL)
