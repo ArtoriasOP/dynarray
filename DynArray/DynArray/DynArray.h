@@ -56,18 +56,16 @@ public:
 			data[num_elements + 1] = item;
 		else
 		{
-			type* tmp = new type[capacity];
-			memcpy(tmp, data, capacity);
+			type* tmp = data;
 			
 			data = new type[capacity + BLOCK_ARRAY];
-			memcpy(data, tmp, num_elements + 1);
-			
-			delete[] tmp;
+			memcpy(data, tmp, num_elements*sizeof(type));
 			
 			data[num_elements + 1] = item;
-			num_elements++;
+		
 		}
-
+		
+		num_elements++;
 	}
 
 	bool IsEmpty() const
